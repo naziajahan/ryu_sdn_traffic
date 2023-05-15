@@ -26,7 +26,7 @@ class SimpleSwitch13(app_manager.RyuApp):
                                           ofproto.OFPCML_NO_BUFFER)]
         self.add_flow(datapath, 0, match, actions)
 
-        # block traffic from h2 (10.0.0.2) to h3 (10.0.0.3) on port 5002
+        # block all traffic from h2 (10.0.0.2) to h3 (10.0.0.3) 
         h2_ip = "10.0.0.2"
         h3_ip = "10.0.0.3"
         iperf_port = 5002
